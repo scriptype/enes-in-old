@@ -1,0 +1,57 @@
+﻿@import url(temel.css);
+
+div#htmlintruder {
+  width: 980px
+}
+
+/* Başlık */
+
+h1#baslik {
+  width: 560px;
+}
+
+/* İçerik */
+
+ul#m_yazilistesi {
+  width: 356px;
+}
+
+ul#m_yazilistesi li {
+  padding: 17px 27px 19px
+}
+
+ul#m_yazilistesi li h1 {
+  margin-bottom: 18px
+}
+
+ul#m_yazilistesi hr~li h1 {
+  margin-top: 2px
+}
+
+div.m_kucuk {
+  width: 282px;
+}
+
+div#m_sonfot {
+  width: 584px;
+  height: 270px;
+}
+
+div#m_sonfot > div {
+  height: 270px
+}
+
+/* Alt bölüm */
+
+div#footer p {
+  font-size: 14px;
+}
+
+ul#neleri {
+  width: 311px;
+  float: left
+}
+
+div#iletisim p {
+  font-size: 14px
+}

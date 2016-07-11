@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel="shortcut icon" href="http://enes.in/fav.png" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords" content="mustafa enes ertarhanacı, scrollroad, scrollTop() metodu, javascript, oyun" />
+<meta name="description" content="Enes'in Kodları | ScrollRoad" />
+<meta property="og:title" content="Enes'in kodları | ScrollRoad" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://enes.in/f.png" />
+<meta property="og:site_name" content="Enes.in" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kodlar - ScrollRoad</title>
+
+<link id="csslink" rel="stylesheet" media="screen" href="../css/sayfatam.css" />
+
+</head>
+
+<body>
+<div id="htmlintruder">
+  <div id="menu">
+    <div id="baslik">
+      <h1>
+        <span id="enes"><a href="../">Enes </a></span>
+        <span id="in">'in </span>
+        <span id="neleri">kodları</span>
+      </h1>
+      <h3>PAYLAŞ:</h3>
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_google_plusone_share"></a>
+        <a class="addthis_button_tumblr"></a>
+        <a class="addthis_button_stumbleupon"></a>
+        <a class="addthis_button_reddit"></a>
+        <a class="addthis_button_delicious"></a>
+        <a class="addthis_button_pinterest_share"></a>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+      </div>
+    </div>
+    <div>
+      <h3>SONRAKİ:</h3>
+      <a href="kayac">Kayaç</a>
+    </div>
+    <div>
+      <h3>ÖNCEKİ:</h3>
+    </div>
+  </div> <!-- /menu -->
+  <div id="icerik">
+    <h1>
+      <div>ScrollRoad - <a href="http://cehennemevet.tumblr.com/road">Demo</a><span>30.06.2013</span></div>
+    </h1>
+    <div class="basresim resim">
+      <img alt="road1" src="" />
+      <span class="caption">ScrollRoad</span>
+    </div>
+    <p>Orta okuldayken bilgisayarımda Road Rash diye bir oyun vardı. Bu oyunda şehir içinde yasadışı motosiklet yarışı yapıyordunuz. Çok severek oynardım; rakiplerinizi motor üzerinde yumrukla, tekmeyle, sopa ve zincirle döverek saf dışı bırakabiliyordunuz. Zincirle ya da sopayla vururken çıkan sesler... Oyunun müzikleri de şahaneydi. Çok severdim yani.</p>
+    <p>Şimdiye kadar benim bilgisayarım olmuş tüm bilgisayarların yüzleştiği bir gerçek vardır: Format! Bir formattan sonra yüklenen her şey başka bir formatla gider. Bu oyun da öyle oldu, adını da aklımda tutmamıştım. Oyunu ancak yıllar sonra, yani geçen günlerde Google'da "moto race where you kick" benzeri bir arama sorgusuyla bulabildim. "Hmm, adı Road Rash'mış hemen indireyim."</p>
+    <p>İndirdim. Birkaç gün neredeyse aralıksız oynadım. Her bölümde farklı sayıda bina, yol, rakip, yaya ve masum araç oluşturuluyor. Her bölümün bu özelliklerinin sabit bir tanımı olduğunu, karşılaşacağınız durumun her seferinde değişebileceğini düşündüm. Yani x bölümünde a noktasında bir polis motoru olması önceden belirlenmiş, kendisiyle gireceğiniz etkileşim size bağlı.</p>
+    <p>Buna benzer düşünsel süreçlerin, esinlenmelerin sonunda oyundaki gibi yol olarak belirlenmiş yerlerde istenilen miktarda yol oluşturacak, üzerinde bir araçla hareket etmenizi, çevreyle etkileşime girmenizi sağlayacak bir javascript oyunu yapmayı hayal ettim.</p>
+    <blockquote class="kod">
+      &lt;div id=&quot;road&quot;&gt;<br />
+        &lt;!-- rel: karşı şerit genişliği, alt: bu tip yoldan kaç tane geleceği --&gt;<br />
+        &lt;div class=&quot;yol&quot; rel=&quot;2&quot; alt=&quot;8&quot;&gt;&lt;/div&gt;<br />
+        &lt;div class=&quot;yol gec&quot; rel=&quot;1t2&quot; alt=&quot;1&quot;>&lt;/div&gt;<br />
+        &lt;div class=&quot;yol&quot; rel=&quot;1&quot; alt=&quot;8&quot;>&lt;/div&gt;<br />
+        &lt;div class=&quot;yol gec&quot; rel=&quot;2t1&quot; alt=&quot;1&quot;>&lt;/div&gt;<br />
+        &lt;div class=&quot;yol&quot; rel=&quot;2&quot; alt=&quot;8&quot;>&lt;/div&gt;<br />
+        [...]<br />
+      &lt;/div&gt;
+    </blockquote>
+    <p>HTML'de istenilen türde ve sayıda yol parçasını meydana getirecek olan katmanları ayarladım. Bu yol parçalarının hepsinin toplam uzunluğu, o bölümde katedilecek toplam mesafe oldu. Bu mesafeye dayanarak yol kenarlarına yerleştirilecek ev sayısı, yoldaki masum araç yoğunluğu gibi değişkenleri kafama göre belirledim. Uygun bir araba resmi belirledim, klavye kontrolleri atadım, ev grafiklerini kendim çok ilkel biçimde hazırladım, araba grafiğini siyah-beyaz yapıp hafif ayarlamalarla yeni bir grafik dosyası haline getirip onu yoldaki masum araçlara atadım. Masum araçlara çarpınca güya size küfür ettiklerini ifade eden konuşma balonları ayarladım. Oyuna başlamak için herhangi bir tuşa basmanızı söyleyen giriş ekranını yaptım.</p>
+    <blockquote class="kod">
+    var webme = &quot;http://img.webme.com/pic/s/scriptype/&quot;;<br />
+    var ccnr = &quot; center center no-repeat&quot;;<br />
+    <br />
+    [...]<br />
+    <br />
+      //Yol döşeme<br />
+  $(&quot;div#road &gt; div.yol&quot;).each(function(){<br />
+    &nbsp;&nbsp;var t = $(this);<br />
+    &nbsp;&nbsp;var r = t.attr('rel');<br />
+    &nbsp;&nbsp;var a = t.attr('alt');<br />
+    &nbsp;&nbsp;for (i=0;i&lt;a;i++) {<br />
+     &nbsp;&nbsp;&nbsp;&nbsp; t.append('&lt;div class=&quot;parc&quot;&gt;&lt;/div&gt;');<br />
+   &nbsp;&nbsp;}<br />
+  });<br />
+  <br />  
+  $(&quot;div.parc&quot;).each(function(){<br />
+    &nbsp;&nbsp;var tr=$(this).parent('div.yol').attr('rel');<br />
+   &nbsp;&nbsp;$(this).css('background','url('+webme+'r'+tr+'.png)'+ccnr);<br />
+  });
+    </blockquote>
+    <p>Aracın ileri doğru hareket ediyor gibi görünmesini sağlamak için scrollTop() metodunu kullandım: siz ileri bastıkça ekran katmanının scrollTop değeri değişiyor. Ayrıca siz ileri bastıkça scrollTop değerinin değişme oranı da değişiyor. İleri tuşuna bastıkça aralıksız olarak, başlangıçta sıfır olan bir sayı değişkenini arttırıyorsunuz. O değişkendeki değeri olduğu gibi scrollTop değerinden çıkarmak mantıksız ve gerçekdışı olacağından, o değerin 20'de 1'i gibi bir değeri işleme alan, yine o değer de aşırı bir noktaya ulaştıysa diye kontrol edip belli bir tavan değerde sabitleyen bir fonksiyon yazdım. Aracın giderek hızlanması, belli bir hızda da "top speed"e ulaşmasını sağlamış oldum. Hiçbir şeye basmayınca, o ana kadar yükselttiğiniz değer gerçekçi bir hızla düşmeye başlıyor, bu da giderek yavaşlamanızı sağlıyor. Frenlerde ise daha hızlıca yavaşlayıp sıfırda sabitleniyor. Sağ-sol yönlendirmesini tamamen CSS değerini oynatarak sağladım. Sağ-sol tuşlarına basınca aracın sağa-sola dönme grafikleri uygulanıyor, sonra varsayılan grafik geri uygulanıyor. Bir masum araca çarptığınızı tespit edip hızınızı anında sıfırlamak için de, çirkin bir ruh haliyle, aracınızın önünün pozisyonuyla herhangi bir aracın arkasının pozisyonu çakışıyor mu onu kontrol ettirdim.</p>
+    <p>Tüm bunları anlatmamın nedeni ise aslında çok üst düzey olmayan javascript bilgisiyle hem size zaman geçirtecek, hem etrafınızdakileri şaşırtacak uygulamalar, oyunlar yapabileceğinizi ve basit bir ilhamla aklınıza koyduğunuz işi gerçekleştirmenin zevkli bir şey olduğunu göstermekti.</p>
+    <p>Ben oyunu geliştirirken belli bir noktada tatmin olduğum ve zevk vermeyecek bir şeyle uğraşmayı hiç sevmeyen biri olduğum için oyunu tam anlamıyla yarım yamalak bıraktım. Rakip araç, yaya, gösterge paneli eklemedim, gerek kod gerek tarayıcı optimizasyonu yapmadım. Gerçekten. Chrome dışında hiçbir tarayıcıda düzgün çalışmıyor.</p>
+    <p>Aşağıdaki linkten oyunun tamamlanmamış son haline ulaşabilirsiniz.</p>
+    <p>Demo: <a href="http://cehennemevet.tumblr.com/road">ScrollRoad</a></p>
+  <ul id="footer" class="enalt">
+    <li><a href="../">Ana Sayfa</a></li>
+    <li><a href="../yazilari/">Yazılarım</a></li>
+    <li><a href="../fotograflari/">Fotoğraflarım</a></li>
+    <li><a href="../kodlari/">Kodlarım</a></li>
+    <li><a href="../sevdikleri/">Sevdiklerim</a></li>
+  </ul>
+  <ul id="iletisim" class="enalt">
+    <li><a href="http://facebook.com/Mustastum">Facebook</a></li>
+    <li><a href="https://twitter.com/scriptype">Twitter</a></li>
+    <li><a href="http://www.linkedin.com/pub/mustafa-enes-ertarhanacı/71/a90/565">Linked.in</a></li>
+    <li><a href="http://be.net/scriptype">Béhance</a></li>
+    <li><a href="http://cehennemevet.tumblr.com">Tumblr</a></li>
+    <li><a href="https://plus.google.com/u/0/116443439644987577930">Google Plus</a></li>
+  </ul>
+  <ul id="email" class="enalt">
+    <li>s<span id="nospam">-nospam-</span>criptyper<span id="at"></span>gmail<span id="dot"></span>com</li>
+  </ul>
+  </div>
+</div> <!-- /htmlintruder -->
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js -->
+<script type="text/javascript" src="../js/sayfa.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Kodlar - Kitaplık.js</title>
+<link rel="shortcut icon" href="http://enes.in/fav.png" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords" content="mustafa enes ertarhanacı, javascript, kütüphane, kitaplık, library, advanced javascript, ileri düzey" />
+<meta name="description" content="Enes'in Kodları | Kitaplık: Kolayca düzenlenebilen, ilkel, hafif javascript kütüphanesi" />
+<meta property="og:title" content="Enes'in Kodları | Kitaplık" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://enes.in/f.png" />
+<meta property="og:site_name" content="Enes.in" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+<!--
+  @import url(../css.css);
+-->
+</style>
+</head>
+
+<body>
+  <div id="kont">
+    <div class="vidic a">
+      <h1>Kitaplık.js
+       <div id="haylaz">
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_facebook"></a>
+          <a class="addthis_button_twitter"></a>
+          <a class="addthis_button_google_plusone_share"></a>
+          <a class="addthis_button_tumblr"></a>
+          <a class="addthis_button_stumbleupon"></a>
+          <a class="addthis_button_reddit"></a>
+          <a class="addthis_button_delicious"></a>
+          <a class="addthis_button_pinterest_share"></a>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+        </div>
+      </div></h1>
+      <div class="border ban">
+        <img src="ban.png" />
+      </div>
+      <ul class="tasar">
+        <li>Basit bir temele dayanır. Özellik ekleyip çıkarmak çok kolay.</li>
+        <li>Proje bazında ihtiyaç duyulan fonksiyonları dahil edip, gereksiz parçaları atmaya ve yer tasarrufu sağlamaya yarar.</li>
+        <li>Kütüphanesiz javascript yazma yeteneği kazanmak isteyenlere yönelik bir &quot;kitaplık&quot;.</li>
+        <li><span class="italik">document.getElementById</span> yazmaya erinenler ve tek seferde çoklu stil atamak isteyenler için hazır fonksiyonlar.</li>
+        <li>2,77 kB</li>
+        <li>Ücretsiz.</li>
+      </ul>
+    </div>
+    <div class="vidic b">
+      <h3>Hazır Fonksiyonlar</h3>
+      <ul class="tasar">
+        <li><span class="vurgu">$('.paragraf, #dugme, h1')</span>: CSS seçicisine uyan elemanları <span class="italik">array</span> olarak döndürür.</li>
+        <li><span class="vurgu">defs(SPAN)</span>: HTML elemanlarının varsayılan seviyesini döndürür (<span class="italik">inline</span> ya da <span class="italik">block</span>).</li>
+        <br />
+        <li>$() fonksiyonuyla elde edilen dizideki elemanlar için (Array.prototype):</li>
+        <br />
+        <li><span class="vurgu">css('background: red; color: #fff')</span>: Stil uygular. Girilen özelliğin değerini döndürür.</li>
+        <li><span class="vurgu">fadeOut(500, callback)</span>: Silinerek yok olmasını sağlar. Bitiminde callback fonksiyonunu döndürür.</li>
+        <li><span class="vurgu">fadeIn(500, callback)</span>: Belirerek görünür olmasını sağlar. Bitiminde callback fonksiyonunu döndürür.</li>
+        <li><span class="vurgu">fadeTo(0.5,500, callback)</span>: Belirlenen süre boyunca, belirlenen opacity değerine geçiş yapar. Bitiminde callback fonksiyonunu döndürür.</li>
+        <li><span class="vurgu">hide()</span>: <span class="italik">display="none"</span> uygular.</li>
+        <li><span class="vurgu">show()</span>: Görünür hale getirir (varsayılan seviyesine döndürür).</li>
+        <li><span class="vurgu">append('&lt;lorem&gt; ipsum')</span>: Sonuna içerik ekler.</li>
+        <li><span class="vurgu">prepend('&lt;lorem&gt; ipsum')</span>: Başına içerik ekler.</li>
+        <li><span class="vurgu">html('&lt;lorem&gt; ipsum')</span>: İçeriğini değiştirir. İçeriği döndürür.</li>
+        <li><span class="vurgu">text('&lt;lorem&gt; ipsum')</span>: İçeriğini HTML'i pasifize ederek değiştirir. İçeriği döndürür.</li>
+        <li><span class="vurgu">hover(renkKirmizi,renkMavi)</span>: <span class="italik">onmouseover</span>'da ilk, <span class="italik">onmouseout</span>'ta ikinci fonksiyonu döndürür.</li>
+        <li><span class="vurgu">click(renkKirmizi)</span>: <span class="italik">onclick=renkKirmizi</span> uygular.</li>
+        <li><span class="vurgu">on('dblclick',renkKirmizi)</span>: <span class="italik">addEventListener('dblclick',renkKirmizi,false)</span> uygular. Herhangi bir event için fonksiyon atamaya yarar.</li>
+        <li><span class="vurgu">addClass('kirmizi')</span>: Yeni class ekler.</li>
+        <li><span class="vurgu">removeClass('kirmizi')</span>: Belirlenen classı siler.</li>
+        <li><span class="vurgu">attr('id','kirmizi')</span>: Seçilen özelliğe yeni değer atar. Seçilen özelliğin değerini döndürür.</li>
+      </ul>
+    </div>
+    <div class="vidic a">
+      <h3>İndir</h3>
+      <a href="kitaplik.js" class="indri">Kitaplık.<span>JS</span></a><span class="indri italik"> (4,05 kB, geliştirici)</span>
+      <br /><br />
+      <a href="kitaplik.min.js" class="indri">Kitaplık.min.<span>JS</span></a><span class="indri italik"> (2,77 kB, sıkıştırılmış)</span>
+    </div>
+    <div class="vidic b">
+      <h2><a href="http://enes.in/kodlari">
+        <span class="enes">Enes </span>
+        <span class="in enesharic">'in</span><br />
+        <span class="neleri enesharic">kodları</span>
+      </a></h2>
+    </div>
+  </div>
+</body>
+</html>

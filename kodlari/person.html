@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel="shortcut icon" href="http://enes.in/fav.png" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords" content="mustafa enes ertarhanacı, javascript, instance, person sınıfı, person class, localStorage" />
+<meta name="description" content="Person: Mother of all javascript person classes." />
+<meta property="og:title" content="Enes'in kodları | Person" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://enes.in/f.png" />
+<meta property="og:site_name" content="Enes.in" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kodlar - Person</title>
+
+<link id="csslink" rel="stylesheet" media="screen" href="../css/sayfatam.css" />
+
+</head>
+
+<body>
+<div id="htmlintruder">
+  <div id="menu">
+    <div id="baslik">
+      <h1>
+        <span id="enes"><a href="../">Enes </a></span>
+        <span id="in">'in </span>
+        <span id="neleri">kodları</span>
+      </h1>
+      <h3>PAYLAŞ:</h3>
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_google_plusone_share"></a>
+        <a class="addthis_button_tumblr"></a>
+        <a class="addthis_button_stumbleupon"></a>
+        <a class="addthis_button_reddit"></a>
+        <a class="addthis_button_delicious"></a>
+        <a class="addthis_button_pinterest_share"></a>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+      </div>
+    </div>
+    <div>
+      <h3>SONRAKİ:</h3>
+    </div>
+    <div>
+      <h3>ÖNCEKİ:</h3>
+      <a href="kitaplik">Kitaplık.js</a>
+    </div>
+  </div> <!-- /menu -->
+  <div id="icerik">
+    <h1>
+      <div>Person - Mother of all person classes<span>14.10.2013</span></div>
+    </h1>
+    <div class="basresim resim">
+      <img alt="pers1" src="" />
+    </div>
+    <p>Geçen birkaç haftadır boş zamanlarımda, son birkaç günde ise gece gündüz üzerinde uğraştığım yeni bir anlamsız kod parçasını tanıtmak istiyorum. Gelenek icabı <a href="https://github.com/scriptype/Person">Person</a> adını verdiğim klasik bir javascript sınıfı/fonksiyonu. Javascriptin orta-ileri konularıyla ilgili deneyimlerimi ve yeni başlayanlar için yol gösterebilecek anlatımları ilerleyen zamanlarda buralara saçmayı düşünüyorum; ama şimdilik konuya odaklanalım.</p>
+    <p>Person iki aşamalı bir kod parçası. İlki nesne yönelimli sınıf yapısı, ikincisi oluşturulan her yeni Person örneğini alıp HTML'e belli bir şablonla basma ve örneğe bilgi eklendikçe ya da mevcut bilgiler güncellendikçe HTML'deki karşılığını da güncelleme işi.</p>
+    <blockquote class="kod">
+      // Yeni Date örneği oluştur<br />
+      var tarih = new Date()<br />
+      <br />
+      // Timestamp al<br />
+      tarih.getTime()
+    </blockquote>
+    <p>Yukarıdaki örnekte yeni bir değişken oluşturup ona <span class="italik">Date</span> objesinin tüm yapısını atadık. Böylece <span class="italik">tarih</span> değişkenine Date'te tanımlı birçok metod ve özellik eklenmiş oldu.</p>
+    <p>İşte sınıf diyerek kastettiğim şey bu örnekteki yapı. Person da böyle bir sınıf.</p>
+    <blockquote class="kod">
+      // Yeni Person örneği oluştur<br />
+      var enes = new Person("scriptype",20,"erkek","istanbul")<br />
+      <br />
+      // Info ekle<br />
+      enes.addInfo("okul","ankara")
+    </blockquote>
+    <p><span class="italik">enes</span> değişkenine Person yapısını atadık. Person'ın bir özelliği, <span class="italik">instance</span> oluşturma anında en az bir parametre girmek zorunda olmanız. Girilen parametreler sırasıyla id, age, sex ve location bilgileri olarak enes.info objesine kaydedildi.</p>
+    <div class="resim">
+      <img alt="pers2" src="" />
+    </div>
+    <p>Oluşturulan instance'ın bilgileri localStorage'da depolanıyor ve instance oluşturma/değiştirme anlarında localStorage'ı kontrol eden bir fonksiyon tetikleniyor (ikinci aşama). HTML'de önceden tanımlı bir template yapısına localStorage'daki verileri atayıp template'i HTML'e basıyor.</p>
+    <h2>HTML</h2>
+    <blockquote class="kod">
+      &lt;script type=&quot;text/template&quot; id=&quot;person_template&quot;&gt;<br />
+      &lt;div class=&quot;profile_info&quot;&gt;<br />
+      &nbsp;&nbsp;&lt;h1 class=&quot;id&quot;&gt;{{Name}}&lt;/h1&gt;<br />
+      &nbsp;&nbsp;&lt;h2&gt;<br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;age&quot;&gt;{{Age}}&lt;/span&gt;, <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;sex&quot;&gt;{{Sex}}&lt;/span&gt;, <br />
+      &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class=&quot;location&quot;&gt;{{Location}}&lt;/span&gt;<br />
+      &nbsp;&nbsp;&lt;/h2&gt;<br />
+      &lt;/div&gt;<br />
+      &lt;ul class=&quot;timeline&quot;&gt;&lt;/ul&gt;<br />
+    &lt;/script&gt;<br />
+    <br />
+    &lt;div id=&quot;people&quot;&gt;&lt;/div&gt;<br />
+    <br />
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/view.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;<br />
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/jquery-1.9.1.min.js&quot;&gt;&lt;/script&gt;<br />
+    &lt;script type=&quot;text/javascript&quot; src=&quot;js/global.js&quot; charset=&quot;utf-8&quot;&gt;&lt;/script&gt;<br />
+    </blockquote>
+    <h2>View.JS</h2>
+    <blockquote class="kod">
+    for (var personObject in localStorage) {<br />
+    <br />
+    &nbsp;&nbsp;var<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;person      = JSON.parse( localStorage[personObject] ),<br />
+    &nbsp;&nbsp;&nbsp;&nbsp;template    = $.parseHTML( $("script#person_template").text() );<br />
+    <br />
+    &nbsp;&nbsp;if ( $("div#"+person.info.uniqueId).text() !== "" ) {<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;htmlize(person, "html");<br />
+      <br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    &nbsp;&nbsp;else {<br />
+    <br />
+    &nbsp;&nbsp;&nbsp;&nbsp;htmlize(person, "append", template);<br />
+      <br />
+    &nbsp;&nbsp;}<br />
+    <br />
+    }
+    </blockquote>
+    <p><span class="italik">htmlize</span> fonksiyonunda metod olarak "append" mi yoksa "html" mi kullanıldığına bakılarak son işlemler yapılıyor. Üzerinde daha fazla konuşmaya gerek yok, incelemek isteyenler <a href="https://github.com/scriptype/Person">bu repo</a>ya gidiyor.</p>
+  <ul id="footer" class="enalt">
+    <li><a href="../">Ana Sayfa</a></li>
+    <li><a href="../yazilari/">Yazılarım</a></li>
+    <li><a href="../fotograflari/">Fotoğraflarım</a></li>
+    <li><a href="../kodlari/">Kodlarım</a></li>
+    <li><a href="../sevdikleri/">Sevdiklerim</a></li>
+  </ul>
+  <ul id="iletisim" class="enalt">
+    <li><a href="http://facebook.com/Mustastum">Facebook</a></li>
+    <li><a href="https://twitter.com/scriptype">Twitter</a></li>
+    <li><a href="http://www.linkedin.com/pub/mustafa-enes-ertarhanacı/71/a90/565">Linked.in</a></li>
+    <li><a href="http://be.net/scriptype">Béhance</a></li>
+    <li><a href="http://cehennemevet.tumblr.com">Tumblr</a></li>
+    <li><a href="https://plus.google.com/u/0/116443439644987577930">Google Plus</a></li>
+  </ul>
+  <ul id="email" class="enalt">
+    <li>s<span id="nospam">-nospam-</span>criptyper<span id="at"></span>gmail<span id="dot"></span>com</li>
+  </ul>
+  </div>
+</div> <!-- /htmlintruder -->
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js -->
+<script type="text/javascript" src="../js/sayfa.js"></script>
+</body>
+</html>

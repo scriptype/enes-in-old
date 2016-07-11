@@ -1,0 +1,100 @@
+﻿@import url(temel.css);
+
+div#htmlintruder {
+  width: 760px !important
+}
+
+/* Başlık */
+
+h1#baslik {
+  width: 500px !important;
+  float: left !important;
+}
+
+div.h_sosyal {
+  width: 240px !important
+}
+
+div.sosyal img {
+  margin-left: 0 !important;
+  margin-right: 0 !important
+}
+
+/* İçerik */
+
+div#sc p {
+  font: 100 12px/18px helvetica, arial, sans-serif !important
+}
+
+div.m_kucuk {
+  width: 212px !important;
+}
+
+div#m_sonkod {
+  margin-right: 19px !important
+}
+
+ul#m_yazilistesi {
+  width: 275px !important
+}
+
+ul#m_yazilistesi li {
+  padding: 10px 15px !important
+}
+
+ul#m_yazilistesi li h1 {
+  margin: 0 0 12px !important
+}
+
+ul#m_yazilistesi li p {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+div#m_sonfot {
+  width: 445px !important;
+  height: 200px !important
+}
+
+div#m_fot {
+  width: 300px !important;
+  height: inherit !important;
+}
+
+div#m_fotoc {
+  width: 145px !important;
+  height: inherit !important;
+}
+
+/* Alt bölüm */
+
+div#footer p {
+  font-size: 12px !important;
+  line-height: 18px !important
+}
+
+div#footer > * {
+  height: 200px !important
+}
+
+ul#neleri {
+  width: 170px !important;
+  float: right !important;
+  margin: 0 !important
+}
+
+ul#neleri h2 {
+  font-size: 64px !important;
+  line-height: 100% !important;
+  letter-spacing: -6px !important
+}
+div#iletisim {
+  width: 210px !important;
+  margin: 0 20px !important
+}
+
+div#hakkinda {
+  width: 230px !important;
+  margin: 0 !important;
+  padding: 0 !important
+}

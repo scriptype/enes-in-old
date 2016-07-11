@@ -1,0 +1,117 @@
+﻿   <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<title>Kodlar - Kayaç</title>
+<link rel="shortcut icon" href="http://enes.in/fav.png" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords" content="mustafa enes ertarhanacı, jquery, slider, kayaç" />
+<meta name="description" content="Enes'in Kodları | Kayaç" />
+<meta property="og:title" content="Enes'in kodları | Kayaç: Temiz, basit, işlevsel slider." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://enes.in/f.png" />
+<meta property="og:site_name" content="Enes.in" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style type="text/css">
+<!--
+  @import url(css/css.css);
+-->
+</style>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+var ayar = {
+  otoGec: true, // false: otomatik geçmesin
+  gosterSure: 5000, // 1000: 1 saniye, x000: x saniye
+  gecSure: 800, // geçiş efektinin süresi
+  genislik: 960,
+  yukseklik: 480,
+  panel: false, // true: butonları resmin dışına al. 20px + buton yüksekliği kadar fazladan yer kaplar.
+  dugme: true // false: düğmeleri kaldır. bu durumda video izlenmeye başlandığında video panelinden çıkış yolu kalmayacaktır.
+}
+</script>
+<script type="text/javascript" src="js/js.js"></script>
+
+</head>
+
+<body>
+  <div id="kont">
+    <div class="vidic a">
+      <h2>Kayaç
+       <div id="haylaz">
+        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+          <a class="addthis_button_facebook"></a>
+          <a class="addthis_button_twitter"></a>
+          <a class="addthis_button_google_plusone_share"></a>
+          <a class="addthis_button_tumblr"></a>
+          <a class="addthis_button_stumbleupon"></a>
+          <a class="addthis_button_reddit"></a>
+          <a class="addthis_button_delicious"></a>
+          <a class="addthis_button_pinterest_share"></a>
+          <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+        </div>
+      </div></h2>
+      <ul id="kayac">
+        <li><a href="#">
+          <h2>jQuery İle Çalışan Slider</h2>
+          <img src="img/aurora.jpg" alt="jQuery Slider" />
+        <a></li>
+        <li><a href="#">
+          <h2>İsteğe Bağlı Otomatik Geçiş Özelliği</h2>
+          <img src="img/kamchatka.jpg" alt="Otomatik Geçiş" />
+        <a></li>
+        <li><a href="#">
+          <h2>Temiz, Basit, Sade</h2>
+          <img src="img/akdeniz.jpg" alt="Basit Slider" />
+        <a></li>
+        <li><a href="#">
+          <h2>Düğmeler Dışarı Alınabilir</h2>
+          <img src="img/orion.jpg" alt="Kolayca Düzenlenebilir" />
+        <a></li>
+        <li><a href="#">
+          <h2>Youtube Videoları İle Uyumlu</h2>
+          <img src="img/stockholm.jpg" alt="Video Destekli Slider" />
+        <a></li>
+        <li><iframe width="960" height="480" src="http://www.youtube.com/embed/rjXEUhgHy_w" frameborder="0" allowfullscreen></iframe></li>
+      </ul>
+    </div>
+    <div class="vidic b ozellik">
+      <h3>Özellikler</h3>
+      <ul class="tasar">
+        <li>Ücretsiz.</li>
+        <li>Tüm tarayıcılarda sorunsuz çalışır.</li>
+        <li>En uygun <span class="italik">Kayaç</span>'ı elde etmek için ayar parametreleriyle oynayın.</li>
+        <li>Panellere istenilen her türden kod parçası yerleştirilebilir.</li>
+        <li>Youtube videoları (iframe) için optimize edildi.</li>
+        <li>Otomatik geçiş özelliği kapatılabilir.</li>
+        <li>Düğmeler resim dışına alınabilir ya da kaldırılabilir.</li>
+        <li>Kenarlara önceki-sonraki panele geçiş düğmeleri eklenebilir.</li>
+      </ul>
+      <ul id="feyzanin_isleri">
+        <li><span class="reserved">var</span> ayar <span class="noktalama">= {</span></li>
+          <li class="tab"><span class="tab">otoGec<span class="noktalama">: </span><span class="reserved">true</span><span class="noktalama">,</span><span class="yorum"> // false: otomatik geçmesin</span></li>
+          <li class="tab">gosterSure<span class="noktalama">: </span><span class="sayi">5000</span><span class="noktalama">,</span><span class="yorum"> // 1000: 1 saniye, x000: x saniye</span></li>
+          <li class="tab">gecSure<span class="noktalama">: </span><span class="sayi">800</span><span class="noktalama">,</span><span class="yorum"> // geçiş efektinin süresi</span></li>
+          <li class="tab">genislik<span class="noktalama">: </span><span class="sayi">960</span><span class="noktalama">,</span></li>
+          <li class="tab">yukseklik<span class="noktalama">: </span><span class="sayi">480</span><span class="noktalama">,</span></li>
+          <li class="tab">sagSolDugme<span class="noktalama">: </span><span class="reserved">true</span><span class="noktalama">,</span><span class="yorum"> // slider'ın kenarlarında sağa-sola ilerletme amaçlı oklar çıkıp çıkmaması.</span></li>
+          <li class="tab">panel<span class="noktalama">: </span><span class="reserved">false</span><span class="noktalama">,</span><span class="yorum"> // true: butonları resmin dışına al. 20px + buton yüksekliği kadar fazladan yer kaplar.</span></li>
+          <li class="tab">dugme<span class="noktalama">: </span><span class="reserved">true</span><span class="yorum"> // false: düğmeleri kaldır. bu durumda video izlenmeye başlandığında video panelinden çıkış yolu kalmayacaktır.</span></li>
+       <li><span class="noktalama"> }</span></li>
+      </ul>
+    </div>
+    <div class="vidic a">
+      <h3>İndir</h3>
+      <a href="Kayac.rar" class="indri">Kayac.<span>RAR</span></a><span class="indri italik"> (1.636 kB)</span>
+    </div>
+    <div class="vidic b">
+      <h1><a href="http://enes.in/kodlari">
+        <span class="enes">Enes </span>
+        <span class="in enesharic">'in</span><br />
+        <span class="neleri enesharic">kodları</span>
+      </a></h1>
+    </div>
+  </div>
+</body>
+</html>

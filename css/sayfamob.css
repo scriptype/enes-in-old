@@ -1,0 +1,25 @@
+﻿@import url(sayfatemel.css);
+
+div#menu {
+  width: 0%;
+  display: none
+}
+
+div#icerik {
+  min-width: 100%;
+  margin-left: 0
+}
+
+div#icerik p, div#icerik blockquote, div#icerik h2 {
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+div#icerik p, div#icerik h2 {
+  padding: 0 1.95em 1.95em;
+}
+
+div#icerik blockquote {
+  margin: 0 2.20em 2.20em;
+  padding: 2em;
+}

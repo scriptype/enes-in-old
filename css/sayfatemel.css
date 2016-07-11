@@ -1,0 +1,299 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Cutive&subset=latin,latin-ext);
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin-ext);
+
+
+@font-face {
+  font-family:"enes";
+  src: url("../font/db4.woff") format("woff");
+}
+
+body, body * {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+body {
+  font-family: georgia, times, serif;
+  overflow-x: hidden
+}
+
+a {
+  color: inherit;
+}
+
+ul {
+  list-style: none
+}
+
+.italik {
+  font-style: italic;
+}
+
+.amper {
+  font-family: "Palatino Linotype";
+  font-style: italic
+}
+
+.numarali {
+  color: #c44;
+  font-size: 0.5em;
+  line-height: 0.1em;
+  font-style: normal
+}
+
+.siyah {
+  color: #000 !important
+}
+
+div#htmlintruder {
+  width: 100%;
+  min-height: 100%;
+}
+
+div#menu {
+  position: fixed;
+  top: 0;
+  left: 0
+}
+
+div#icerik {
+  max-width: 1000px;
+  position: relative
+}
+
+div#icerik h1 {
+  height: 5em;
+  font: 100 3.1em/1.456em Cutive, georgia, serif;
+  background: url(../img/sayf.png) center bottom repeat-x;
+  border-bottom: 2px solid #e5e5e5;
+  overflow: hidden;
+}
+
+div#icerik h1 div {
+  max-width: 1000px;
+  height: 5em;
+  position: relative;
+  padding: 0.2em 0.45em;
+}
+
+div#icerik h1.atos div {
+  background: url(../img/atoskont.png) right center no-repeat;
+}
+
+div#icerik h1 span {
+  font-size: 0.2em;
+  line-height: 14px;
+  letter-spacing: 0.2em;
+  position: absolute;
+  left: 2.7em;
+  bottom: 10px;
+  padding-left: 15px;
+  background: url(../img/time.png) left top no-repeat
+}
+
+div#icerik h2 {
+}
+
+div#icerik a {
+  color: #44c
+}
+
+div#icerik a:visited {
+  color: #a4f
+}
+
+div#icerik a:active {
+  color: red
+}
+
+div#icerik img {
+  vertical-align: bottom;
+}
+
+div#icerik img, div#icerik iframe {
+  max-width: 100%;
+}
+
+div#icerik iframe {
+  max-height: 562px
+}
+
+div.resim + div.resim {
+  margin: 2em 0
+}
+
+div.resim {
+  padding: 0em 2em;
+  max-width: 100%
+}
+
+div.basresim {
+  margin: 2em 0em 0em
+}
+
+div.resim img {
+  border-radius: 10px;
+}
+
+div.resim span.caption {
+  display: block;
+  position: relative;
+  padding: 0.5em;
+  top: -2em;
+  margin-bottom: -2em;
+  color: #fff;
+  font-size: 1.5em;
+  font-family: "Roboto Condensed", helvetica, arial;
+  line-height: 1em;
+  background: rgba(0,0,0,0.6);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  text-shadow: 0 0 4px rgba(0,0,0,0.6);
+}
+
+div#icerik blockquote.fotograf, div#icerik blockquote.kod {
+  background: #333;
+  color: #eee;
+  border-left: 5px solid #c44;
+  font-family: monospace;
+}
+
+div#icerik blockquote.alinti {
+  font-style: italic;
+  background: url(../img/q.png) no-repeat left top;
+  padding-left: 3em;
+  padding-right: 3em
+}
+
+div#icerik p, div#icerik ul {
+  color: #222
+}
+
+div#icerik ul {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding: 0 1.666666666666667em 1.666666666666667em;
+}
+
+div#icerik h1 + p,
+div#icerik h1 + div.basresim + p {
+  padding-top: 1.3em
+}
+
+div#icerik div.resim + p {
+  padding-top: 1.3em
+}
+
+div#icerik h1 + p:first-letter,
+div#icerik h1 + div.basresim + p:first-letter {
+  font-size: 5em;
+  line-height: 0.7em;
+  padding: 0 0.1em 0.1em 0;
+  font-style: italic;
+  font-family: "Palatino Linotype";
+  float: left;
+  -webkit-text-stroke: 0.35px
+}
+
+div#icerik ul.enalt {
+  list-style: none;
+  float: left;
+  min-width: 200px;
+  min-height: 200px;
+}
+
+div#icerik ul li {
+}
+
+div#icerik ul#kaynakca:before {
+  content: "Kaynaklar:"
+}
+
+div#icerik ul#footer:before {
+  content: "Ana Dizin:"
+}
+
+div#icerik ul#iletisim:before {
+  content: "İletişim:"
+}
+
+div#icerik ul#email:before {
+  content: "E-Posta:"
+}
+
+div#icerik ul#email li span#at:before {
+  content: "@"
+}
+
+div#icerik ul#email li span#dot:before {
+  content: "."
+}
+
+div#icerik ul#email li span#nospam {
+  display: none
+}
+
+div#baslik {
+  min-height: 3.87em;
+  overflow: hidden;
+  padding-top: 0.5em
+}
+
+div#baslik h1 {
+  font: 100 4em/0.5em enes, helvetica, arial, sans-serif;
+}
+
+div#baslik h1 span#enes {
+  letter-spacing: -0.1em;
+  margin-left: -1px;
+  line-height: 0.8em;
+  color: #c44;
+}
+
+div#baslik h1 span#enes > a {
+  text-decoration: none
+}
+
+div#baslik h1 span#in {
+  font-size: 0.5em;
+  color: #aaa
+}
+
+div#baslik h1 span#neleri {
+  display: block;
+  font-size: 1em;
+  color: #555;
+  line-height: 1em;
+  margin-top: -10px;
+}
+
+div#baslik h3 {
+  margin-top: 40px
+}
+
+div#menu > * {
+  border-right: 1px solid #e5e5e5;
+  border-bottom: 2px solid #e5e5e5;
+  background: url(../img/sayf.png) center bottom repeat-x;
+  padding-left: 15px;
+}
+
+div#menu div[class^=addthis] {
+  padding-top: 20px
+}
+
+div#menu div#baslik ~ div {
+  min-height: 6em;
+  margin-top: 2em
+}
+
+div#menu div h3 {
+  letter-spacing: 0.1em;
+  font-family: "Roboto Condensed";
+  font-weight: normal;
+  font-size: 0.9em
+}

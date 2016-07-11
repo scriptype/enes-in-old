@@ -1,0 +1,127 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Cutive&subset=latin,latin-ext);
+
+@font-face {
+  font-family:"enes";
+  src: url("../font/db4.woff") format("woff");
+}
+
+body, body * {
+  margin: 0;
+  padding: 0;
+  font-size: 100%
+}
+
+body {
+  font-family: georgia, times, serif;
+  background: url(../img/m_yazibg.png) no-repeat fixed;
+  background-size: 100% 100%
+}
+
+div#htmlintruder {
+  max-width: 720px;
+  margin: 0 auto
+}
+
+h1 {
+  color: #c44;
+  font: 100 6em/100% enes, helvetica, arial, sans-serif;
+  padding: 0.2em
+}
+
+div#htmlintruder *:focus {
+  outline: none;
+  background: #333;
+  color: #eee
+}
+
+h1 a:active, ul a:active {
+  color: #fff;
+  background: #c44
+}
+
+h1 {
+  margin-bottom: -36px
+}
+
+h1 span#enes {
+  letter-spacing: -8px;
+  margin-left: -5px;
+}
+
+h1 span#in {
+  font-size: 0.5em;
+  margin-left: 5px;
+  color: #666
+}
+
+h1 span#neleri {
+  color: #333;
+  font-size: 0.37em;
+  text-transform: uppercase
+}
+
+h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  font-size: 6em;
+  margin: 0.2em;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
+  list-style: none
+}
+
+ul li {
+  font-size: 0.3em;
+  padding: 0.5em;
+  padding-bottom: 2em;
+  box-shadow: none;
+  background: none;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+ul li:first-child {
+  border-top-left-radius: inherit;
+  border-top-right-radius: inherit;
+}
+
+ul li:last-child {
+  border-bottom-left-radius: inherit;
+  border-bottom-right-radius: inherit;
+}
+
+ul li:hover {
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+  background: #ffa
+}
+
+ul li h2 {
+  font-family: Cutive;
+  font-size: 0.7em
+}
+
+ul li h2 a {
+  color: #c44
+}
+
+ul li p {
+  font-size: 0.6em
+}
+
+ul li img {
+  max-width: 100%;
+  max-height: 200px
+}
+
+div#htmlintruder > p {
+  font-size: 1.5em;
+  margin: 0.9em;
+}
+
+div#htmlintruder > p a {
+  color: #44c
+}

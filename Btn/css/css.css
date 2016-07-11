@@ -1,0 +1,37 @@
+body {
+  background: #E0E0E0
+}
+
+input#btn {
+  display: none
+}
+
+label {
+  display: block;
+  width: 400px;
+  height: 400px;
+  text-indent: -9999px;
+  background: url(../img/btnk.png);
+  cursor: pointer;
+  transition: background 0.5s;
+  -webkit-transition: background 0.5s;
+  margin: 0 auto
+}
+
+label:hover {
+  background: url(../img/btns.png);
+}
+
+label:active {
+  background: url(../img/btna.png);
+  transition: none;
+  -webkit-transition: none
+}
+
+input#btn:checked + label {
+  background: url(../img/btny.png);
+}
+
+input#btn:checked + label:active {
+  background: url(../img/btna.png);
+}

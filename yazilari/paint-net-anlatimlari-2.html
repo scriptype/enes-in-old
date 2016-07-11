@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<link rel="shortcut icon" href="http://enes.in/fav.png" />
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta name="keywords" content="mustafa enes ertarhanacı, yazılar, grafik tasarım, paint.net, grafik düzenleme, türkçe anlatım" />
+<meta name="description" content="Enes'in Yazıları | Paint.NET Türkçe Anlatımları, Paint.NET teknikleri" />
+<meta property="og:title" content="Enes'in Yazıları | Paint.NET Anlatımları - 2" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="http://enes.in/f.png" />
+<meta property="og:site_name" content="Enes.in" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Yazılar - Paint.NET Türkçe Anlatımları - 2</title>
+
+<link id="csslink" rel="stylesheet" media="screen" href="../css/sayfatam.css" />
+
+</head>
+
+<body>
+<div id="htmlintruder">
+  <div id="menu">
+    <div id="baslik">
+      <h1>
+        <span id="enes"><a href="../">Enes </a></span>
+        <span id="in">'in </span>
+        <span id="neleri">yazıları</span>
+      </h1>
+      <h3>PAYLAŞ:</h3>
+      <!-- AddThis Button BEGIN -->
+      <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+        <a class="addthis_button_facebook"></a>
+        <a class="addthis_button_twitter"></a>
+        <a class="addthis_button_google_plusone_share"></a>
+        <a class="addthis_button_tumblr"></a>
+        <a class="addthis_button_stumbleupon"></a>
+        <a class="addthis_button_reddit"></a>
+        <a class="addthis_button_delicious"></a>
+        <a class="addthis_button_pinterest_share"></a>
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=undefined"></script>
+      </div>
+      <!-- AddThis Button END -->
+    </div>
+    <div>
+      <h3>SONRAKİ:</h3>
+      <a href="gereksiz.html">* {Gereksiz}</a>
+    </div>
+    <div>
+      <h3>ÖNCEKİ:</h3>
+      <a href="bootstrap-ve-web-tasarimda-kisisellik.html">Bootstrap ve Web Tasarımda Kişisellik</a>
+    </div>
+  </div> <!-- /menu -->
+  <div id="icerik">
+    <h1>
+      <div>Paint.NET Anlatımları - 2<span>01.08.2013</span></div>
+    </h1>
+    <div class="basresim resim">
+      <img alt="pdnt1" src="" />
+    </div>
+    <p>Basit teknikler anlattığım <a href="paint-net-anlatimlari-1.html" title="Serinin ilk yazısı">Paint.NET Anlatımları</a> yazı serisinin ikinci bölümünde oval köşeli dikdörtgenlerden bahsetmek istiyorum. Paint.NET'te oval köşeli dikdörtgenin köşelerinin yuvarlaklık derecesi -yarıçap(radius)- ayarlanmıyor. Photoshop'un Paint.NET'ten daha pratik olduğu nadir konulardan biri bu olsa gerek (hatırla: Enes &lt;&lt; PS-hater).</p>
+    <p>Gelgelelim Paint.NET'in böyle basit konulardaki bazı imkansızlıkları insanın yaratıcı yönünü geliştirebiliyor. Geçen gün düşünürken oval köşeli dikdörtgenin köşelerinin yuvarlaklık miktarını kafama göre belirlemenin bir yolunu buldum -biraz uğraştırıcı olsa da.</p>
+    <h2>Oval köşeli dikdörtgenlerin yuvarlaklık miktarını değiştirmek</h2>
+    <p>Öncelikle yuvarlaklık miktarının aslında ne anlama geldiğini açıklayayım: Yuvarlaklık miktarının ölçüsü, köşelere yerleştirilen hayali dairelerin yarıçaplarıdır.</p>
+    <div class="resim">
+      <img alt="pdnt2" src="" />
+    </div>
+    <p>Buradan yola çıkıldığında, köşe yuvarlaklıklarını ayarlamak için akla gelen ilk yol köşelere, yarıçapını kendi belirlediğimiz dairelerden koymak oluyor.</p>
+    <p>Bu şekilde her köşeye ayrı derecede yuvarlaklık vermek de mümkün olacak. Önemli olan bu işlemi düzgün bir yöntem izleyerek gerçekleştirmek.</p>
+    <p><span class="italik">1) </span>Yeni bir Paint.NET belgesi açın. <span class="italik">CTRL+R</span> kısayoluyla kanvas genişliğini ve yüksekliğini, oval köşenin genişliği ve yüksekliğinin 2 katı olarak ayarlayın. Yani 100px genişlik ve yükseklikteki bir oval köşe için 200'e 200'lük, kare bir çalışma alanı oluşturun.</p>
+    <p><span class="italik">2) </span>Daire için <span class="italik">CTRL+Shift+N</span> kısayoluyla yeni katman oluşturun. <span class="italik">Ellipse</span> aracını seçin, içi dolgulu ayarı seçin (sol-üstten). Oluşturduğunuz yeni katman içerisinde, boş resim alanına tam sığacak bir daire çizin. Dairenin rengi dikdörtgenle aynı olmalı. Tam bir daire çizmek için <span class="italik">Shift</span>'e basılı tutup çizebilirsiniz.</p>
+    <p><span class="italik">3) </span>Oluşturduğunuz daireyi tam ortadan 4 eşit parçaya böldüğünüzü hayal ederseniz, ortaya dikdörtgenin her köşesi için bir daire dilimi çıktığını görürsünüz. Sadece sol üstte kalan 1/4'lük, 90 derecelik dilimi alıp yeni bir resim olarak farklı kaydettikten sonra onu yatay ve dikey düzlemde ters çevirerek diğer köşeleri elde edeceğiz.</p>
+    <div class="resim">
+      <img alt="pdnt3" src="" />
+    </div>
+    <p><span class="italik">4) </span>İşaretlediğim yerlerdeki 1 piksellik boşluklar sonradan sorun çıkaracağı için <span class="italik">CTRL+Shift+R</span> kısayoluyla resmi üst-soldan birer piksel kırparak resmin üst ve sol kenarlarını daireyle temas kuracak hale getiriyoruz.</p>
+    <div class="resim">
+      <img alt="pdnt4" src="" />
+    </div>
+    <p><span class="italik">5) Image &gt; Rotate</span> ve <span class="italik">Flip</span> seçeneklerini kullanarak sağ-üst, sağ-alt ve sol-alt köşeleri de elde edebilirsiniz. Daha sonra istediğiniz dikdörtgenin köşelerine bu köşe resimlerini olduğu gibi yerleştirin.</p>
+    <p>Ya da anlattıklarımı boşverin ve <a href="http://forums.getpaint.net/index.php?/topic/12678-radius-corners-plugin-for-rounding-the-corners-of-an-image/">köşe yuvarlaklığı ayarlama eklentisi</a> kurun.</p>
+  <ul id="footer" class="enalt">
+    <li><a href="../">Ana Sayfa</a></li>
+    <li><a href="../yazilari/">Yazılarım</a></li>
+    <li><a href="../fotograflari/">Fotoğraflarım</a></li>
+    <li><a href="../kodlari/">Kodlarım</a></li>
+    <li><a href="../sevdikleri/">Sevdiklerim</a></li>
+  </ul>
+  <ul id="iletisim" class="enalt">
+    <li><a href="http://facebook.com/Mustastum">Facebook</a></li>
+    <li><a href="https://twitter.com/scriptype">Twitter</a></li>
+    <li><a href="http://www.linkedin.com/pub/mustafa-enes-ertarhanacı/71/a90/565">Linked.in</a></li>
+    <li><a href="http://be.net/scriptype">Béhance</a></li>
+    <li><a href="http://cehennemevet.tumblr.com">Tumblr</a></li>
+    <li><a href="https://plus.google.com/u/0/116443439644987577930">Google Plus</a></li>
+  </ul>
+  <ul id="email" class="enalt">
+    <li>s<span id="nospam">-nospam-</span>criptyper<span id="at"></span>gmail<span id="dot"></span>com</li>
+  </ul>
+  </div>
+</div> <!-- /htmlintruder -->
+<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+<!-- http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js -->
+<script type="text/javascript" src="../js/sayfa.js"></script>
+</body>
+</html>

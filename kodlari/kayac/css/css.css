@@ -1,0 +1,253 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:900&subset=latin,latin-ext);
+
+@font-face {
+  font-family:"enes";
+  src: url("http://enes.in/font/db4.woff") format("woff");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: inherit;
+  text-decoration: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-weight: 100
+}
+
+html {
+  height: 100%
+}
+
+body {
+  font: 100 100%/100% helvetica, arial, sans-serif;
+  height: 100%;
+  background: #333 url(../../b.png)
+}
+
+.italik {
+  font-style: italic
+}
+
+div#kont {
+  width: 1024px;
+  min-height: 100%;
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 160px rgba(0,0,0,0.4);
+}
+
+div#haylaz {
+  float: right;
+  padding-top: 32px
+}
+
+div.vidic {
+  padding: 0 32px 32px
+}
+
+div.b {
+  background: #fff6f6 url(../img/gareli.png);
+  position: relative
+}
+
+div.ozellik {
+  height: 361px
+}
+
+div.vidic > h2, h3 {
+  color: #000;
+  font-family: roboto;
+  font-weight: 900;
+  -webkit-text-stroke: 0.35px;
+  height: 90px;
+  line-height: 90px;
+}
+
+div.vidic > h2 {
+  font-size: 3em
+}
+
+div.vidic h3 {
+  font-size: 2em;
+}
+
+div.vidic > ul.tasar {
+  margin-left: 24px
+}
+
+div.vidic > ul.tasar li {
+  list-style-type: square;
+  font-size: 1.1em;
+  font-family: georgia, times, serif;
+  height: 30px;
+  line-height: 30px
+}
+
+div.vidic > ul#feyzanin_isleri {
+  position: absolute;
+  right: 0;
+  top: 85px;
+  width: 560px;
+  font-size: 0.8em;
+  line-height: 1.3em;
+  font-family: "Lucida Console", verdana, monospace;
+  opacity: .25
+}
+
+div.vidic > ul#feyzanin_isleri li {
+  list-style-type: none;
+}
+
+div.vidic > ul#feyzanin_isleri li.tab {
+  text-indent: 15px
+}
+
+ul#feyzanin_isleri li span.reserved {
+  font-weight: bold;
+  color: #A46000
+}
+
+ul#feyzanin_isleri li span.yorum {
+  color: #646464
+}
+
+ul#feyzanin_isleri li span.sayi {
+  color: #FF0000
+}
+
+ul#feyzanin_isleri li span.noktalama {
+  color: #B000B0
+}
+
+div.vidic > h1 {
+  font: 100 4em/0.5em enes, helvetica, arial, sans-serif;
+  padding-top: 20px
+}
+
+div.vidic > h1 span.enes {
+  letter-spacing: -0.1em;
+  margin-left: -1px;
+  line-height: 0.8em;
+  color: #c44;
+}
+
+div.vidic > h1 span.enes > a {
+  text-decoration: none
+}
+
+div.vidic > h1 span.in {
+  font-size: 0.5em;
+  color: #aaa
+}
+
+div.vidic > h1 span.neleri {
+  font-size: 0.9em
+}
+
+div.b div.bciz {
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  background: rgba(0,0,0,0.065);
+  left: 0
+}
+
+div.b div.ust {
+  top: 0
+}
+
+div.b div.alt {
+  bottom: 0
+}
+
+.indri {
+  font-family: georgia, times, serif
+}
+
+a.indri {
+  color: #22f;
+  text-decoration: underline;
+  font-size: 1.5em
+}
+
+a.indri span {
+  font-size: 0.8em
+}
+
+span.indri {
+  font-size: 1em
+}
+
+ul#kayac {
+  box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+  position: relative;
+  margin: 0 auto;
+  background: #ddd;
+  background: -webkit-linear-gradient(top, #eee, #ddd);
+}
+
+ul#kayac li {
+  float: left;
+  width: 100%;
+  position: absolute;
+  display: none;
+  background: #d0d0d0;
+  background: -webkit-linear-gradient(top, #e0e0e0, #d0d0d0);
+}
+
+ul#kayac li:first-child {
+  display: block;
+}
+
+ul#kayac li h2 {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  text-align: right;
+  width: 50%;
+  font-size: 4em;
+  line-height: 1.2em;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+  font-family: Roboto;
+  font-weight: 900
+}
+
+ul#kayac li h2:hover {
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.1);
+  color: #000
+}
+
+ul#kayac div#palet {
+  position: absolute;
+  bottom: 10px
+}
+
+ul#kayac span.yuvar {
+  width: 15px;
+  height: 15px;
+  background: rgba(0,0,0,0.6);
+  display: block;
+  float: left;
+  margin-right: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 2px #fff
+}
+
+ul#kayac span.yov {
+  background: #fff;
+  background: -webkit-linear-gradient(top, #fff, #ccc);
+  box-shadow: 0 0 2px #000
+}
+
+ul#kayac div#bord {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+}
